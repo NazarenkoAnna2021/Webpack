@@ -1,6 +1,6 @@
-//import '../css/style.css'
+import '../css/style.css'
+
+const header1 = document.getElementById('header1');
 const str = 'string';
 
-for (let i = 0; i < 10; i++) {
-    console.log(str);
-}
+header1.innerHTML = str;

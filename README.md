@@ -14,3 +14,5 @@ npm install -D eslint-plugin-no-loops
 npm install -g typescript
 
 Also you can write only npm install
+
+линт для вебпака
