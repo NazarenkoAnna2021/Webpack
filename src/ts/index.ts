@@ -1,6 +1,8 @@
 import '../css/style.css'
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+import { main } from './functions';
+//import {constant} from "./constants";
+const axios = require('axios');
 
-const header1 = document.getElementById('header1');
-const str = 'string';
-
-header1.innerHTML = str;
+main();

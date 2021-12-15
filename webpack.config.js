@@ -2,6 +2,7 @@ const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = process.env.NODE_ENV === 'production';
@@ -12,6 +13,9 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
     entry: './ts/index.ts',
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
+    },
     output: {
         filename: `./js/${filename('js')}`,
         path: path.resolve(__dirname, 'dist'),
@@ -22,6 +26,11 @@ module.exports = {
             filename: 'index.html',
             minify: {
                 collapseWhitespace: isProd
+            }
+        }),
+        new ForkTsCheckerWebpackPlugin({
+            typescript: {
+                configFile : path.resolve(__dirname, './tsconfig.json')
             }
         }),
         new CleanWebpackPlugin(),
@@ -46,17 +55,6 @@ module.exports = {
                 },
             },
             {
-                test: /\.m?ts$/,
-                exclude: /(node_modules|bower_components)/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env'],
-                        plugins: ['@babel/plugin-transform-runtime']
-                    }
-                }
-            },
-            {
                 test: /\.(png|jpe?g|gif)$/i,
                 loader: 'file-loader',
                 options: {
@@ -66,6 +64,6 @@ module.exports = {
         ]
     },
     devServer: {
-        port: 4500
+        port: 4200
     }
 };
