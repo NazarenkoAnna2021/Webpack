@@ -1,8 +1,10 @@
 import '../css/style.css'
 import "core-js/stable";
 import "regenerator-runtime/runtime";
-import { main } from './functions';
-//import {constant} from "./constants";
-const axios = require('axios');
+import { writeList, openUser, closeInfo } from './functions';
+import { dom } from './dom'
 
-main();
+writeList();
+
+dom.mainArea.addEventListener('click', openUser);
+dom.userInfo.addEventListener('click', closeInfo)

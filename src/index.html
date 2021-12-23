@@ -9,7 +9,33 @@
 </head>
 
 <body>
-    <p class="out"></p>
+    <div class="container">
+        <div class="main-area"></div>
+        <div class="user-info none">
+            <p class="userText"></p>
+        </div>
+    </div>
+    <template type="text" class="template-card">
+        <div class="person">
+            <img id="{{id}}" class="fase" src="{{url}}" alt="Fase">
+            <p>{{text}}</p>
+        </div>
+    </template>
+    <template type="text" class="template-info">
+        <div class="info-person">
+            <img class="info-fase" src="{{url}}" alt="Fase">
+            <h1 class="user-login">{{login}}</h1>
+            <div class="info__text">
+                <h2 class="user">organizations</h2>
+                <p class="user">{{organizations_url}}</p>
+            </div>
+            <div class="info__text">
+                <h2 class="user">followers</h2>
+                <p class="user">{{followers_url}}</p>
+            </div>
+            <div class="close">&#10006</div>
+        </div>
+    </template>
 </body>
 
 </html>
