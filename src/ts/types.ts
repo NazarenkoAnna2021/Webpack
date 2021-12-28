@@ -1,5 +1,4 @@
-import { type } from "os"
-import { object } from "../../node_modules/joi/lib/index"
+import { type } from "os";
 
 export type Tdom = {
     gallery: HTMLDivElement,
@@ -15,13 +14,32 @@ export type Tdom = {
     big: HTMLDivElement,
     close: HTMLButtonElement,
     imgdog: HTMLImageElement
-}
+};
 export type Tstate = {
     message: Array<string>
-}
+};
+export type TURL = {
+    dogPath: string
+};
 export type TDogs = {
     data: {
         message: Array<string>,
         status: string
     }
+};
+export type TConstants = {
+    DIV: string,
+    INPUT: string,
+    CLASS: string,
+    GOUP: string,
+    GOTO: string,
+    GODOWN: string,
+    CLICKEDBUTT: string,
+    DISABLED: string,
+    IMG: string,
+    ID: string,
+    SRC: string,
+    PX: string,
+    HIDDEN: string,
+    CLICK: string
 }

@@ -1,12 +1,13 @@
-import '/css/style.css'
-import { main, toClicked, goToPrevious, goToNext, showBigImg, closeBigDog } from './functions'
-import { dom } from './dom'
+import "/css/style.css";
+import { main, toClicked, goToPrevious, goToNext, showBigImg, closeOpenBigDog } from "./functions";
+import { dom } from "./dom";
+import { constants } from "./constants";
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 
 main();
-dom.pagination.addEventListener('click', toClicked);
-dom.goUp.addEventListener('click', goToPrevious);
-dom.goDown.addEventListener('click', goToNext);
-dom.gallery.addEventListener('click', showBigImg);
-dom.close.addEventListener('click', closeBigDog);
+dom.pagination.addEventListener(constants.CLICK, toClicked);
+dom.goUp.addEventListener(constants.CLICK, goToPrevious);
+dom.goDown.addEventListener(constants.CLICK, goToNext);
+dom.gallery.addEventListener(constants.CLICK, showBigImg);
+dom.close.addEventListener(constants.CLICK, closeOpenBigDog);

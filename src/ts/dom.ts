@@ -13,4 +13,4 @@ export const dom: Tdom = {
     big: document.querySelector('.big'),
     close: document.querySelector('.close'),
     imgdog: document.querySelector('.imgdog')
-}
+};
