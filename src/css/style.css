@@ -1,0 +1,18 @@
+body{
+    
+    background:  center / cover no-repeat url("https://www.tg-m.ru/img/mag/2019/1/art_62_06_16.jpg");
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+h1{
+    font-size: 70px;
+    color: #094e37;
+    text-shadow: 1px 1px 2px #fff;
+}

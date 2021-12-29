@@ -1,12 +1,15 @@
 import { dom } from './dom'
-const { TWwther } = require('./types.ts');
+import { countDownDate } from './constants';
 
-async function setP<T>(url: string): Promise<T> {
-    const data = await fetch(url);
-    return data.json();
-}
 
-export async function main() {
-    const res = await setP<typeof TWwther>('http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=0cca118932f4b46601283406a6138a09');
-    dom.out.innerHTML = res.main.temp_min;
-}
+export const calcDate = setInterval(function() {
+
+  const now = new Date().getTime();
+  const distance = countDownDate - now;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  dom.date.innerHTML = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+}, 1000);
