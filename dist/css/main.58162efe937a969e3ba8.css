@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "VujahdayScript"; 
+    src: url(../7ce812d2f02d1a979621.ttf) format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    font-size: 100%;
+	line-height: 1;
+	font-size: 24px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+    background:  center / cover no-repeat url("https://www.tg-m.ru/img/mag/2019/1/art_62_06_16.jpg");
+    font-family: "VujahdayScript";
+    color: #0b8653;
+    text-shadow: 1px 1px 2px #04412b;
+    font-size: 30px;
+    overflow: hidden;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 100vh;
+    background-color: #ffffffbb;
+}
+
+h1{
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+p{
+    text-align: center;
+    padding: 5px;
+    height: 40px;
+}
+.snow{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.none{
+    display: none;
+}
