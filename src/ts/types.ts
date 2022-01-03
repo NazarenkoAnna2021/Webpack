@@ -1,44 +1,38 @@
-type TWeather = {
-    coord: {
-        lon: number
-        lat: number
-    },
-    weather: [
-        {
-            id: number,
-            main: string,
-            description: string,
-            icon: string
-        }
-    ],
-    base: string,
-    main: {
-        temp: string,
-        feels_like: number,
-        temp_min: number,
-        temp_max: number,
-        pressure: number,
-        humidity: string
-    },
-    visibility: number,
-    wind: {
-        speed: string,
-        deg: number
-    },
-    clouds: {
-        all: number
-    },
-    dt: number,
-    sys: {
-        type: number,
-        id: number,
-        country: string,
-        sunrise: number,
-        sunset: number
-    },
-    timezone: number,
-    id: number,
-    name: string,
-    cod: number
+export type TStatistic = {
+    data: {
+        "location": {
+            "__CLASS__": string,
+            "area": Array<string>,
+            "display_name": string
+        },
+        "month": {
+            "2021-10": number,
+            "2021-05": number,
+            "2021-01": number,
+            "2021-12": number,
+            "2021-02": number,
+            "2021-06": number,
+            "2021-11": number,
+            "2021-08": number,
+            "2021-03": number,
+            "2021-07": number,
+            "2021-09": number,
+            "2021-04": number
+        },
+        "__CLASS__": string
+    }
+};
+export type TData = {
+    labels: string[];
+    datasets: {
+        label: string;
+        data: number[];
+        borderColor: string;
+        backgroundColor: string;
+        borderWidth: number;
+    }[];
 }
-export {TWeather};
+export type TDom = {
+    grafic: HTMLCanvasElement;
+    where: HTMLSelectElement;
+}

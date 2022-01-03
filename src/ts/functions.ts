@@ -1,12 +1,48 @@
-import { dom } from './dom'
-const { TWwther } = require('./types.ts');
+import { dom } from './dom';
+import Chart from '../../node_modules/chart.js/auto/auto.esm';
+import { URL } from './constants/url';
+import { data, COLOR } from './constants/constants';
+import { TStatistic } from './types';
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+const axios = require('axios');
 
-async function setP<T>(url: string): Promise<T> {
-    const data = await fetch(url);
-    return data.json();
+let myChart: Chart = new Chart(dom.grafic, {
+    type: 'line',
+    data: data,
+    options: {
+        maintainAspectRatio: false
+    }
+});
+
+const getData = async <T>(url: string, pathname: string): Promise<T> => {
+    const resp: T = await axios.get(url.concat(pathname));
+    return resp;
 }
 
-export async function main() {
-    const res = await setP<typeof TWwther>('http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=0cca118932f4b46601283406a6138a09');
-    dom.out.innerHTML = res.main.temp_min;
+const remakeDataToUsage = async (): Promise<void> => {
+    const statistic: TStatistic = await getData<TStatistic>(URL, dom.where.value);
+    data.labels = Object.keys(statistic.data.month);
+    data.datasets[0].data = Object.values(statistic.data.month);
+    data.datasets[0].borderColor = COLOR.RED;
+    data.datasets[0].backgroundColor = COLOR.RED;
+    data.datasets[0].borderWidth = 1;
+}
+
+const loadRequest = async (): Promise<void> => {
+    dom.grafic.style.zIndex = '-1';
+    await remakeDataToUsage();
+    dom.grafic.style.zIndex = '2';
+    myChart.destroy();
+}
+
+export const createChart = async (): Promise<void> => {
+    await loadRequest();
+    myChart = new Chart(dom.grafic, {
+        type: 'line',
+        data: data,
+        options: {
+            maintainAspectRatio: false
+        }
+    });
 }

@@ -1,5 +1,5 @@
 const http = require('http');
-require('./database');
+const {router} = require('./router/router')
 
 const port = 3001;
 
@@ -10,13 +10,14 @@ const server = http.createServer(async (req, res) => {
     res.setHeader('Content-Type', 'application/json, text/plain; charset=utf-8;');
     res.setHeader('Access-Control-Max-Age', '-1');
 
-    // const bodyBuffer = [];
-    // req.on('data', (data) => {
-    //     bodyBuffer.push(data);
-    // });
+    const bodyBuffer = [];
+    req.on('data', (data) => {
+        bodyBuffer.push(data);
+    });
 
     req.on('end', async () => {
-       // const body = bodyBuffer.length ? JSON.parse(bodyBuffer) : null;
+       const body = bodyBuffer.length ? JSON.parse(bodyBuffer) : null;
+       await router({ req, res, body });
     });
 
     res.on('error', (err) => {
