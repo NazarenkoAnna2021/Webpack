@@ -1,6 +1,7 @@
 import '../css/style.css'
+import { dom } from './dom';
+import { createChart } from './functions';
 
-const header1 = document.getElementById('header1');
-const str = 'string';
+createChart();
 
-header1.innerHTML = str;
+dom.where.addEventListener('change', createChart);

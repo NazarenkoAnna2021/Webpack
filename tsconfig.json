@@ -1,7 +1,8 @@
 {
     "compilerOptions": {
+        "module": "esnext",
         "noEmitOnError": true,
-        "target": "ES5",
+        "target": "ES6",
         "watch": true
     }
 }
