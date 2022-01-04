@@ -10,12 +10,26 @@
 
 <body>
     <div class="conteiner">
-        <div class="add">
-            <input type="text" class="newLi">
-            <button type="button" class="addButton">add</button>
-            <ul class="to-do"></ul>
-            <ul class="in-progress"></ul>
-            <ul class="done"></ul>
+        <h1>Kanban Board</h1>
+        <div class="list">
+            <div class="to-do">
+                <label>To Do</label>
+                <input type="text" class="newLi">
+                <button type="button" class="addButton">add</button>
+                <ul class="to-do_list"></ul>
+            </div>
+            <div class="in-progress">
+                <label>In Progress</label>
+                <input type="text" class="newLi">
+                <button type="button" class="addButton">add</button>
+                <ul class="in-progress_list"></ul>
+            </div>
+            <div class="done">
+                <label>Done</label>
+                <input type="text" class="newLi">
+                <button type="button" class="addButton">add</button>
+                <ul class="done_list"></ul>
+            </div>
         </div>
     </div>
     <template type="text" id="taskItemTemplate">
