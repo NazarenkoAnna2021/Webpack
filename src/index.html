@@ -9,7 +9,20 @@
 </head>
 
 <body>
-    <p class="out"></p>
+    <div class="conteiner">
+        <div class="add">
+            <input type="text" class="newLi">
+            <button type="button" class="addButton">add</button>
+            <ul class="to-do"></ul>
+            <ul class="in-progress"></ul>
+            <ul class="done"></ul>
+        </div>
+    </div>
+    <template type="text" id="taskItemTemplate">
+        <li>
+            <label for="{{itemid}}">{{title}}</label>
+        </li>
+    </template>
 </body>
 
 </html>
