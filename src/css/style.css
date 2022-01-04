@@ -1,11 +1,49 @@
-
+@font-face {
+    font-family: "Klaxons"; 
+    src: url("../fonts/Klaxons.otf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+input:focus{
+    outline: 0;
+}
+body{
+    font-size: 100%;
+	line-height: 1;
+	font-size: 24px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+    background-color: #040e2c;
+    font-family: "Klaxons";
+}
 .conteiner{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction:column;
     align-items: center;
     height: 100vh;
     width: 100vw;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 10px solid #bb70c9;
+    box-shadow: inset #d2dbf7 0 0 20px;
+    border-radius: 40px;
+    height: 80%;
+    width: 30%;
+    padding: 20px 0 20px 0;
 }
 .list{
     display: flex;
@@ -13,4 +51,48 @@
     align-items: flex-start;
     height: 80%;
     width: 100%;
+}
+input {
+    background-color: #073266;
+    border: 4px solid #ac61b9;
+    border-radius: 20px;
+    text-align: center;
+    color: #ac61b9;
+    font-size: 20px;
+    box-shadow: #99a8d4 0 0 10px;
+    margin-top: 10px;
+    width: 90%;
+    height: 40px;
+
+}
+label, h1{
+    color: #d2dbf7; 
+    text-shadow: #d2dbf7 0 0 20px;
+}
+h1{
+    margin: 50px;
+}
+input:focus{
+    text-shadow: #d2dbf7 0 0 20px;
+    box-shadow: #d2dbf7 0 0 20px;
+}
+input:hover{
+    text-shadow: #d2dbf7 0 0 20px;
+    box-shadow: #d2dbf7 0 0 10px;
+    border: 4px solid #ac61b9;
+}
+button{
+    background: #ac61b9;
+	border: 4px solid #ac61b9;
+    color: #225ea7;
+    font-size: 20px;
+    -moz-box-shadow:0 0 10px #d2dbf7; 
+    -webkit-box-shadow:0 0 10px #d2dbf7; 
+    box-shadow:0 0 10px #d2dbf7;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+}
+.addButton{
+    margin-top: 10px;
 }
