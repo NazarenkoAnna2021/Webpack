@@ -14,27 +14,35 @@
         <div class="list">
             <div class="to-do box">
                 <label>To Do</label>
-                <input type="text" class="newLi">
-                <button type="button" class="addButton">&#43;</button>
-                <ul class="to-do_list"></ul>
+                <div class="add">
+                    <input type="text" class="new-li">
+                    <button type="button" class="add-button">&#43;</button>
+                </div>
+                <ul class="to-do_list">
+                    <li>Lorem ipsum dolor sit amet </li>
+                </ul>
             </div>
             <div class="in-progress box">
                 <label>In Progress</label>
-                <input type="text" class="newLi">
-                <button type="button" class="addButton">&#43;</button>
+                <div class="add">
+                    <input type="text" class="new-li">
+                    <button type="button" class="add-button">&#43;</button>
+                </div>
                 <ul class="in-progress_list"></ul>
             </div>
             <div class="done box">
                 <label>Done</label>
-                <input type="text" class="newLi">
-                <button type="button" class="addButton">&#43;</button>
+                <div class="add">
+                    <input type="text" class="new-li">
+                    <button type="button" class="add-button">&#43;</button>
+                </div>
                 <ul class="done_list"></ul>
             </div>
         </div>
     </div>
-    <template type="text" id="taskItemTemplate">
+    <template type="text" id="task-item-template">
         <li>
-            <label for="{{itemid}}">{{title}}</label>
+            <label>{{title}}</label>
         </li>
     </template>
 </body>

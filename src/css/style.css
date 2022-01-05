@@ -26,6 +26,7 @@ body{
 	-webkit-text-size-adjust: 100%;
     background-color: #040e2c;
     font-family: "Klaxons";
+    color: #ac61b9;
 }
 .conteiner{
     display: flex;
@@ -90,9 +91,17 @@ button{
     -webkit-box-shadow:0 0 10px #d2dbf7; 
     box-shadow:0 0 10px #d2dbf7;
     height: 40px;
-    width: 40px;
+    width: 200px;
     border-radius: 50px;
 }
 .addButton{
     margin-top: 10px;
+}
+.add{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
 }
