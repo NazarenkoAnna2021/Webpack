@@ -9,32 +9,24 @@
 </head>
 
 <body>
-    <div class="all-box">
-        <div class="todo">
-            <div class="add">
-                <input type="text" class="new-li to-do__li">
-                <button type="button" class="to-do__butt">add</button>
-            </div>
-            <ul class="listStylereset box to-do"></ul>
-        </div>
-        <div class="in-progress">
-            <div class="add">
-                <input type="text" class="new-li progress__li">
-                <button type="button" class="in-progress__butt">add</button>
-            </div>
-            <ul class="listStylereset box progress"></ul>
-        </div>
-        <div class="done">
-            <div class="add">
-                <input type="text" class="new-li done__li">
-                <button type="button" class="done__butt">add</button>
-            </div>
-            <ul class="listStylereset box isDone"></ul>
+    <div class="container">
+        <div class="wrapper">
+            <ul class="list">
+                <li class="list__caption">To do</li>
+                <li class="list__caption">In progress</li>
+                <li class="list__caption">Done</li>
+                <li class="list__cell js-cell">
+                    <div class="list__card js-card" draggable="true">
+                        <div class="list__card-info">
+                            task description
+                        </div>
+                    </div>
+                </li>
+                <li class="list__cell js-cell"></li>
+                <li class="list__cell js-cell"></li>
+            </ul>
         </div>
     </div>
-    <template type="text" id="task-item-template">
-            <label class="{{id}}" draggable="true">{{title}}</label>
-    </template>
 </body>
 
 </html>

@@ -1,15 +1,10 @@
 export const constants = {
-    none: '',
-    button: 'BUTTON',
-    id: 'id',
-    val: 'val',
-    tasks: 'tasks',
-    item: 'item',
-    tempTitle: '{{title}}',
-    tempItemid: '{{id}}',
-    tempValId: '{{valid}}',
-    tempNoProperties: '{{}}',
-    checked: 'checked',
-    template: 'template'
-
+    dragstart: 'dragstart',
+    dragend: 'dragend',
+    dragover: 'dragover',
+    dragenter: 'dragenter',
+    dragleave: 'dragleave',
+    drop: 'drop',
+    hide: 'hide',
+    hovered: 'hovered'
 }
