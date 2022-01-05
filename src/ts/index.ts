@@ -1,13 +1,11 @@
 import '/css/style.css'
 import { dom } from './dom'
-import View from './view'
-import Controller from './controller';
+import { addElem, writeTodo, writeProgress, writeDone } from './functions'
 
+writeTodo();
+writeProgress();
+writeDone();
 
-const view = new View();
-const controller = new Controller();
-view.writeLi();
-
-dom.addButton.addEventListener('click', controller.addElem);
-dom.toDo.addEventListener('click', controller.deleteElement);
-dom.toDo.addEventListener('change', controller.checkTask);
+dom.todoButton.addEventListener('click', () => addElem(dom.toDo, dom.toDoLi.value));
+dom.progressButton.addEventListener('click', () => addElem(dom.inProgress, dom.progressLi.value));
+dom.doneButton.addEventListener('click', () => addElem(dom.done, dom.doneLi.value));

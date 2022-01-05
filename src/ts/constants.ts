@@ -6,7 +6,7 @@ export const constants = {
     tasks: 'tasks',
     item: 'item',
     tempTitle: '{{title}}',
-    tempItemid: '{{itemid}}',
+    tempItemid: '{{id}}',
     tempValId: '{{valid}}',
     tempNoProperties: '{{}}',
     checked: 'checked',

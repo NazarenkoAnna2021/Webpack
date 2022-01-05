@@ -1,6 +1,11 @@
 export type TDom = {
-    addButton: HTMLButtonElement;
-    newLi: HTMLInputElement;
+    todoButton: HTMLButtonElement;
+    progressButton: HTMLButtonElement;
+    doneButton: HTMLButtonElement;
+    allBox: HTMLDivElement; 
+    toDoLi: HTMLInputElement;
+    progressLi: HTMLInputElement;
+    doneLi: HTMLInputElement;
     toDo: HTMLDivElement;
     inProgress: HTMLDivElement;
     done: HTMLDivElement;

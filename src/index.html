@@ -9,41 +9,31 @@
 </head>
 
 <body>
-    <div class="conteiner">
-        <h1>Kanban Board</h1>
-        <div class="list">
-            <div class="to-do box">
-                <label>To Do</label>
-                <div class="add">
-                    <input type="text" class="new-li">
-                    <button type="button" class="add-button">&#43;</button>
-                </div>
-                <ul class="to-do_list">
-                    <li>Lorem ipsum dolor sit amet </li>
-                </ul>
+    <div class="all-box">
+        <div class="todo">
+            <div class="add">
+                <input type="text" class="new-li to-do__li">
+                <button type="button" class="to-do__butt">add</button>
             </div>
-            <div class="in-progress box">
-                <label>In Progress</label>
-                <div class="add">
-                    <input type="text" class="new-li">
-                    <button type="button" class="add-button">&#43;</button>
-                </div>
-                <ul class="in-progress_list"></ul>
+            <ul class="listStylereset box to-do"></ul>
+        </div>
+        <div class="in-progress">
+            <div class="add">
+                <input type="text" class="new-li progress__li">
+                <button type="button" class="in-progress__butt">add</button>
             </div>
-            <div class="done box">
-                <label>Done</label>
-                <div class="add">
-                    <input type="text" class="new-li">
-                    <button type="button" class="add-button">&#43;</button>
-                </div>
-                <ul class="done_list"></ul>
+            <ul class="listStylereset box progress"></ul>
+        </div>
+        <div class="done">
+            <div class="add">
+                <input type="text" class="new-li done__li">
+                <button type="button" class="done__butt">add</button>
             </div>
+            <ul class="listStylereset box isDone"></ul>
         </div>
     </div>
     <template type="text" id="task-item-template">
-        <li>
-            <label>{{title}}</label>
-        </li>
+            <label class="{{id}}" draggable="true">{{title}}</label>
     </template>
 </body>
 
