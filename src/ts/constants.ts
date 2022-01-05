@@ -1,4 +1,5 @@
-export const constants = {
+import { TConstants } from "./types"
+export const constants:TConstants = {
     dragstart: 'dragstart',
     dragend: 'dragend',
     dragover: 'dragover',
