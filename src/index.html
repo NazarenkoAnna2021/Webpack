@@ -12,14 +12,14 @@
     <div class="container">
         <div class="wrapper">
             <div class="add-task">
-                <input type="text">
+                <input type="text" id="new-task">
                 <button class="add-task__button">add</button>
             </div>
             <ul class="list">
                 <li class="list__caption">To do</li>
                 <li class="list__caption">In progress</li>
                 <li class="list__caption">Done</li>
-                <li class="list__cell js-cell">
+                <li class="list__cell js-cell" id="to-do">
                     <div class="list__card js-card" draggable="true">
                         <label class="list__card-info">
                             task description
@@ -36,7 +36,7 @@
             </ul>
         </div>
     </div>
-    <template type="text">
+    <template type="text" id="temp">
         <div class="list__card js-card" draggable="true">
             <label class="list__card-info">
                 {{task}}

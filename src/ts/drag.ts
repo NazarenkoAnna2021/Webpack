@@ -1,4 +1,3 @@
-import { dom } from "./dom";
 import { constants } from "./constants";
 
 export let taskToDrag:Element;
@@ -29,7 +28,7 @@ export function dragDrop(): void {
     this.classList.remove(constants.hovered)
 }
 
-export function dragTask(event) {
+export function dragTask(event): void {
     taskToDrag = event.target.parentNode;
     console.log(taskToDrag)
     event.target.parentNode.addEventListener(constants.dragstart, dragStart);

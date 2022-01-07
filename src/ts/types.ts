@@ -1,7 +1,9 @@
-import { type } from "os";
-
 export type TDom = {
     cells: NodeListOf<Element>;
+    toDo: HTMLLIElement;
+    newTask: HTMLInputElement;
+    addButton: HTMLButtonElement;
+    template: string;
 };
 export type TConstants = {
     dragstart: string;
@@ -12,4 +14,8 @@ export type TConstants = {
     drop: string;
     hide: string;
     hovered: string;
+    mousedown: string;
+    click: string;
+    taskToChange: string;
+    template: string
 }

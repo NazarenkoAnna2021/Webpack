@@ -7,5 +7,9 @@ export const constants:TConstants = {
     dragleave: 'dragleave',
     drop: 'drop',
     hide: 'hide',
-    hovered: 'hovered'
+    hovered: 'hovered',
+    mousedown: 'mousedown',
+    click: 'click',
+    taskToChange: '{{task}}',
+    template: 'template'
 }
