@@ -1,7 +1,6 @@
 import { type } from "os";
 
 export type TDom = {
-    card: Element;
     cells: NodeListOf<Element>;
 };
 export type TConstants = {

@@ -4,11 +4,11 @@ import { constants } from "./constants";
 export let taskToDrag:Element;
 
 export const dragStart = function (): void {
-    setTimeout(() => this.classList.add(constants.hide), 0)
+    setTimeout(() => taskToDrag.classList.add(constants.hide), 0)
 }
 
 export function dragEnd(): void {
-    setTimeout(() => this.classList.remove(constants.hide), 0)
+    setTimeout(() => taskToDrag.classList.remove(constants.hide), 0)
 }
 
 export function dragOver(event: { preventDefault: () => void; }): void {
@@ -24,15 +24,14 @@ export function dragLeave(): void {
     this.classList.remove(constants.hovered);
 }
 
-export function dragDrop(task): void {
-    const divElement = 
-    console.log(task)
-    this.append(task);
+export function dragDrop(): void {
+    this.append(taskToDrag);
     this.classList.remove(constants.hovered)
 }
 
 export function dragTask(event) {
-    event.target.addEventListener(constants.dragstart, dragStart);
-    event.target.addEventListener(constants.dragend, dragEnd);
-    taskToDrag = event.target;
+    taskToDrag = event.target.parentNode;
+    console.log(taskToDrag)
+    event.target.parentNode.addEventListener(constants.dragstart, dragStart);
+    event.target.parentNode.addEventListener(constants.dragend, dragEnd);
 }

@@ -11,18 +11,24 @@
 <body>
     <div class="container">
         <div class="wrapper">
+            <div class="add-task">
+                <input type="text">
+                <button class="add-task__button">add</button>
+            </div>
             <ul class="list">
                 <li class="list__caption">To do</li>
                 <li class="list__caption">In progress</li>
                 <li class="list__caption">Done</li>
                 <li class="list__cell js-cell">
-                    <div class="list__card js-card">
-                        <div class="list__card-info"  draggable="true">
+                    <div class="list__card js-card" draggable="true">
+                        <label class="list__card-info">
                             task description
-                        </div>
-                        <div class="list__card-info" draggable="true">
+                        </label>
+                    </div>
+                    <div class="list__card js-card" draggable="true">
+                        <label class="list__card-info">
                             task description1
-                        </div>
+                        </label>
                     </div>
                 </li>
                 <li class="list__cell js-cell"></li>
@@ -30,6 +36,13 @@
             </ul>
         </div>
     </div>
+    <template type="text">
+        <div class="list__card js-card" draggable="true">
+            <label class="list__card-info">
+                {{task}}
+            </label>
+        </div>
+    </template>
 </body>
 
 </html>
