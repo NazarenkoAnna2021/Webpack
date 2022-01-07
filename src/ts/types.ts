@@ -17,5 +17,7 @@ export type TConstants = {
     mousedown: string;
     click: string;
     taskToChange: string;
-    template: string
+    div: string;
+    listCard: string;
+    jsCard: string
 }

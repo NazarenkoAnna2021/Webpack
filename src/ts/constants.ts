@@ -11,5 +11,7 @@ export const constants:TConstants = {
     mousedown: 'mousedown',
     click: 'click',
     taskToChange: '{{task}}',
-    template: 'template'
+    div: 'div',
+    listCard: 'list__card',
+    jsCard: 'js-card'
 }

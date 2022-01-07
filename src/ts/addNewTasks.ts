@@ -13,8 +13,9 @@ function writeTask(newList: string): ChildNode {
 }
 
 function htmlToElement(html: string): ChildNode {
-    const template:HTMLTemplateElement = document.createElement(constants.template);
-    html = html.trim();
+    const template:HTMLElement = document.createElement(constants.div);
+    template.classList.add(constants.listCard, constants.jsCard);
+    template.draggable = true;
     template.innerHTML = html;
-    return template.content.firstChild;
+    return template;
 }
