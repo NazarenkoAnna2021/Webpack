@@ -37,7 +37,7 @@ body{
   list-style-type: none;
   box-shadow: 0 0 7px 5px #00000033;
   background-color: #a0ccce;
-  overflow: hidden;
+  
 }
 .list__card{
   display: flex;

@@ -1,6 +1,8 @@
 import { dom } from "./dom";
 import { constants } from "./constants";
 
+export let taskToDrag:Element;
+
 export const dragStart = function (): void {
     setTimeout(() => this.classList.add(constants.hide), 0)
 }
@@ -22,7 +24,15 @@ export function dragLeave(): void {
     this.classList.remove(constants.hovered);
 }
 
-export function dragDrop(): void {
-    this.append(dom.card);
+export function dragDrop(task): void {
+    const divElement = 
+    console.log(task)
+    this.append(task);
     this.classList.remove(constants.hovered)
+}
+
+export function dragTask(event) {
+    event.target.addEventListener(constants.dragstart, dragStart);
+    event.target.addEventListener(constants.dragend, dragEnd);
+    taskToDrag = event.target;
 }
