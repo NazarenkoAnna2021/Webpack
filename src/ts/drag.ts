@@ -30,7 +30,6 @@ export function dragDrop(): void {
 
 export function dragTask(event): void {
     taskToDrag = event.target.parentNode;
-    console.log(taskToDrag)
     event.target.parentNode.addEventListener(constants.dragstart, dragStart);
     event.target.parentNode.addEventListener(constants.dragend, dragEnd);
 }
